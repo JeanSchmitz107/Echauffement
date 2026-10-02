@@ -10,6 +10,8 @@ class Program
 
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
 
+            Console.WriteLine("Bonjour,\n"); Console.WriteLine("Je m'appelle Jean et l'un de mes jeu préférer c'est Ori.");
+
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
 
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
@@ -35,7 +37,7 @@ class Program
         string[] arme_nom = { "fusils d'assaut", "pistolets mitrailleurs", "fusils à pompe", "sniper" };
         int[] arme_cout = { 2000, 3000, 1200, 5000 };
 
-        Console.WriteLine("Bonjour,\n"); Console.WriteLine("Je m'appelle Jean et l'un de mes jeu préférer c'est Ori.");
+        
 
 
     }
