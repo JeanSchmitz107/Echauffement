@@ -55,12 +55,14 @@ class Program
 
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
         // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
+        // Lorsque l'utilisateur respecte ces demandes, retirez le prix de l'arme de l'argent de l'utilisateur, puis confirmez à l'utilisateur que l'action a été effectuée 
+        // Dans tous les autres cas, informez l'utilisateur que l'action n'a pas été possible
 
         if (arme_cout[nbr_tbl - 1] <= usr_portefeuille) usr_euro_verif = 1; else usr_euro_verif = 0;
 
         if (usr_euro_verif == 0)
         {
-            Console.WriteLine("l'action n'a pas été possible");
+            Console.WriteLine("\nl'action n'a pas été possible");
 
             if (usr_age_verif == "majeur")
             {
@@ -75,19 +77,16 @@ class Program
         {
             if(usr_age_verif == "mineur")
             {
-                Console.WriteLine("l'action n'a pas été possible");
+                Console.WriteLine("\nl'action n'a pas été possible");
                 Console.WriteLine("Il faut avoir plus de 18 ans pour acheter une arme");
             }
             else
             {
                 usr_portefeuille -= arme_cout[nbr_tbl - 1];
-                Console.WriteLine("l'action a été effectuée");
-                Console.WriteLine("Merci pour votre achat "+ usr_prenom + " !\nVous possedez dés maintenant un " + arme_nom[nbr_tbl - 1] + ".\nIl vous reste : " + usr_portefeuille + " euro");
+                Console.WriteLine("\nl'action a été effectuée");
+                Console.WriteLine("\nMerci pour votre achat "+ usr_prenom + " !\nVous possedez dés maintenant un " + arme_nom[nbr_tbl - 1] + ".\nIl vous reste : " + usr_portefeuille + " euro\n");
             }  
         }
-
-        // Lorsque l'utilisateur respecte ces demandes, retirez le prix de l'arme de l'argent de l'utilisateur, puis confirmez à l'utilisateur que l'action a été effectuée 
-        // Dans tous les autres cas, informez l'utilisateur que l'action n'a pas été possible
 
         /*
          * Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
