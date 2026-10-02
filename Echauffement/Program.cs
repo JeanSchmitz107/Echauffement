@@ -20,7 +20,7 @@ class Program
 
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
 
-            Console.WriteLine("\n\nVous Vous appelez comment?"); Console.Write("--> ");  usr_prenom =  Console.ReadLine();
+            Console.WriteLine("\n\nVous Vous appelez comment?"); Console.Write("--> ");  usr_prenom = Console.ReadLine();
 
             Console.WriteLine("\nQuelle âge avez vous?"); Console.Write("--> "); usr_age = Convert.ToInt32(Console.ReadLine());
 
@@ -55,7 +55,16 @@ class Program
 
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
 
-        if (arme_cout[nbr_tableau - 1] <= usr_portefeuille) usr_euro_verif = 1; else usr_euro_verif = 0;
+        usr_euro_verif = arme_cout[nbr_tableau - 1];
+
+        if (usr_euro_verif <= usr_portefeuille)
+        {
+            usr_euro_verif = 1;
+        }
+        else
+        {
+            usr_euro_verif = 0;
+        }
 
         if (usr_euro_verif == 0 && usr_age_verif == "majeur")
         {
@@ -71,7 +80,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("Merci pour votre achat !\nVous possedez dés maintenant un" + arme_nom[nbr_tableau - 1]);
+            Console.WriteLine("Merci pour votre achat "+ usr_prenom + " !\nVous possedez dés maintenant un" + arme_nom[nbr_tableau - 1]);
         }
 
         // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
