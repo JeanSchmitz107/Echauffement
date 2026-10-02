@@ -8,7 +8,7 @@ class Program
          * Consigne générale : faites un commit entre chaque étape !
          */
 
-            int usr_age, usr_portefeuille, nbr_tableau, usr_euro_verif;
+            int usr_age, usr_portefeuille, nbr_tbl = 0, usr_euro_verif;
             string usr_prenom, usr_age_verif;
             string[] arme_nom = { "fusils d'assaut", "pistolets mitrailleurs", "fusils à pompe", "sniper" };
             int[] arme_cout = { 2000, 3000, 1200, 5000 };
@@ -39,7 +39,7 @@ class Program
 
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
 
-        Console.WriteLine("\nCombien avez vous d'euro?"); Console.Write("--> "); usr_portefeuille = Convert.ToInt32(Console.Read());
+        Console.WriteLine("\nCombien avez vous d'euro?"); Console.Write("--> "); usr_portefeuille = Convert.ToInt32(Console.ReadLine());
 
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
 
@@ -51,11 +51,12 @@ class Program
 
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
 
-        Console.WriteLine("Pour choisir une arme il faut entrer le n° corespondent"); nbr_tableau = Convert.ToInt32(Console.Read());
+        Console.WriteLine("Pour choisir une arme il faut entrer le n° corespondent");
+        nbr_tbl = Convert.ToInt32(Console.ReadLine());
 
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
 
-        usr_euro_verif = arme_cout[nbr_tableau - 1];
+        usr_euro_verif = arme_cout[nbr_tbl - 1];
 
         if (usr_euro_verif <= usr_portefeuille)
         {
@@ -80,7 +81,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("Merci pour votre achat "+ usr_prenom + " !\nVous possedez dés maintenant un" + arme_nom[nbr_tableau - 1]);
+            Console.WriteLine("Merci pour votre achat "+ usr_prenom + " !\nVous possedez dés maintenant un" + arme_nom[nbr_tbl - 1]);
         }
 
         // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
