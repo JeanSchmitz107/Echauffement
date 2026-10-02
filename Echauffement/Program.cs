@@ -8,7 +8,7 @@ class Program
          * Consigne générale : faites un commit entre chaque étape !
          */
 
-            int usr_age, usr_portefeuille;
+            int usr_age, usr_portefeuille, nbr_tableau;
             string usr_prenom, usr_age_verif;
             string[] arme_nom = { "fusils d'assaut", "pistolets mitrailleurs", "fusils à pompe", "sniper" };
             int[] arme_cout = { 2000, 3000, 1200, 5000 };
@@ -20,13 +20,34 @@ class Program
 
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
 
-            Console.WriteLine("Vous VOus appelez comment?"); usr_prenom = Console.ReadLine();
+            Console.WriteLine("\n\nVous Vous appelez comment?"); Console.Write("--> ");  usr_prenom =  Console.ReadLine();
+
+            Console.WriteLine("\nQuelle âge avez vous?"); Console.Write("--> "); usr_age = Convert.ToInt32(Console.ReadLine());
 
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
 
+        if (usr_age >= 18)
+        {
+            usr_age_verif = "majeur";
+        } 
+        else
+        {
+            usr_age_verif = "mineur";
+        }
+
+        Console.WriteLine("Tu es " + usr_age_verif);
+
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
 
+        Console.WriteLine("\nCombien avez vous d'euro?"); Console.Write("--> "); usr_portefeuille = Convert.ToInt32(Console.Read());
+
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
+
+        Console.WriteLine("\n");
+        for (int i = 0; i < 4; i++)
+        {
+            Console.WriteLine("-  Un " + arme_nom[i] + "\n   " + arme_cout[i] + " euro\n");
+        }
 
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
 
@@ -40,9 +61,9 @@ class Program
          * Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
          */
 
-        
 
-        
+
+
 
 
     }
