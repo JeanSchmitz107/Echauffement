@@ -8,7 +8,7 @@ class Program
          * Consigne générale : faites un commit entre chaque étape !
          */
 
-            int usr_age, usr_portefeuille, nbr_tableau;
+            int usr_age, usr_portefeuille, nbr_tableau, usr_euro_verif;
             string usr_prenom, usr_age_verif;
             string[] arme_nom = { "fusils d'assaut", "pistolets mitrailleurs", "fusils à pompe", "sniper" };
             int[] arme_cout = { 2000, 3000, 1200, 5000 };
@@ -55,9 +55,23 @@ class Program
 
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
 
-        if (arme_cout[nbr_tableau - 1] < usr_portefeuille && usr_age_verif = "majeur")
+        if (arme_cout[nbr_tableau - 1] <= usr_portefeuille) usr_euro_verif = 1; else usr_euro_verif = 0;
+
+        if (usr_euro_verif == 0 && usr_age_verif == "majeur")
         {
-            Console.WriteLine("Vous ne pouvez pas assez d'argent pour acheter cette arme");
+            Console.WriteLine("Vous n'avez pas assez d'argent pour acheter cette arme");
+        }
+        else if (usr_euro_verif == 1 && usr_age_verif == "mineur")
+        {
+            Console.WriteLine("Il faut avoir plus de 18 ans pour acheter une arme");
+        }
+        else if (usr_euro_verif == 0 && usr_age_verif == "mineur")
+        {
+            Console.WriteLine("Vous n'avez pas assez d'argent et vous devez avoir plus de 18 pour acheter cette arme");
+        }
+        else
+        {
+            Console.WriteLine("Merci pour votre achat !\nVous possedez dés maintenant un" + arme_nom[nbr_tableau - 1]);
         }
 
         // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
