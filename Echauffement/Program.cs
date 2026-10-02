@@ -55,7 +55,7 @@ class Program
 
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
 
-        if (arme_cout[nbr_tableau - 1] < usr_portefeuille)
+        if (arme_cout[nbr_tableau - 1] < usr_portefeuille && usr_age_verif = "majeur")
         {
             Console.WriteLine("Vous ne pouvez pas assez d'argent pour acheter cette arme");
         }
