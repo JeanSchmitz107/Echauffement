@@ -8,11 +8,19 @@ class Program
          * Consigne générale : faites un commit entre chaque étape !
          */
 
+            int usr_age, usr_portefeuille;
+            string usr_prenom, usr_age_verif;
+            string[] arme_nom = { "fusils d'assaut", "pistolets mitrailleurs", "fusils à pompe", "sniper" };
+            int[] arme_cout = { 2000, 3000, 1200, 5000 };
+
+
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
 
-            Console.WriteLine("Bonjour,\n"); Console.WriteLine("Je m'appelle Jean et l'un de mes jeu préférer c'est Ori.");
+            Console.WriteLine("Bonjour,\n\nJe m'appelle Jean et l'un de mes jeu préférer c'est Ori.\nC'est un jeu 2d super beau où le but c'est de sauvé la forêt");
 
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
+
+            Console.WriteLine("Vous VOus appelez comment?"); usr_prenom = Console.ReadLine();
 
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
 
@@ -32,10 +40,7 @@ class Program
          * Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
          */
 
-        int usr_age, usr_portefeuille;
-        string usr_prenom, usr_age_verif;
-        string[] arme_nom = { "fusils d'assaut", "pistolets mitrailleurs", "fusils à pompe", "sniper" };
-        int[] arme_cout = { 2000, 3000, 1200, 5000 };
+        
 
         
 
