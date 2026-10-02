@@ -46,7 +46,7 @@ class Program
         Console.WriteLine("\n");
         for (int i = 0; i < 4; i++)
         {
-            Console.WriteLine("-  Un " + arme_nom[i] + "\n   " + arme_cout[i] + " euro\n");
+            Console.WriteLine( (i+1) + " -  Un " + arme_nom[i] + "\n   " + arme_cout[i] + " euro\n");
         }
 
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
