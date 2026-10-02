@@ -46,10 +46,12 @@ class Program
         Console.WriteLine("\n");
         for (int i = 0; i < 4; i++)
         {
-            Console.WriteLine( (i+1) + " -  Un " + arme_nom[i] + "\n   " + arme_cout[i] + " euro\n");
+            Console.WriteLine( (i+1) + " -  Un " + arme_nom[i] + "\n     " + arme_cout[i] + " euro\n");
         }
 
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
+
+        Console.WriteLine("Pour choisir une arme il faut entrer le n° corespondent"); nbr_tableau = Convert.ToInt32(Console.Read());
 
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
 
